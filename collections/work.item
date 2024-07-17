@@ -1,0 +1,96 @@
+
+{.section item}
+  {.var @itemTitle title}
+  <div class="nd-vpage-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({assetUrl});">
+    <a href="{sourceUrl}" data-lity><div class="btn-play"></div></a>
+  </div>
+  <div class="container">
+    <!-- <div class="nd-vpage-4ph">
+      {.repeated section customContent.fourimages}
+        <div class="nd-vpage-4ph-one" style="background-image:url({assetUrl}?format=500w);"></div>
+      {.end}
+    </div> -->
+    <div class="nd-vpage-floats">
+      <div class="nd-vpage-descr">
+        <div class="nd-vpage-clientlogo" style="display:none">
+          <img src="{customContent.logo.assetUrl}?format=500w" alt="">
+        </div>
+
+        <h1 class="nd-vpage-title">{title}</h1>
+
+        <div class="nd-vpage-category">
+          <!-- <a href="{collection.fullUrl}?category={categories.0|url-encode}">{categories.0} Videos</a> -->
+          {categories.0} Videos
+        </div>
+
+        <div class="nd-vpage-body">
+          {body}
+        </div>
+      </div>
+
+      <div class="nd-vpage-sidebar">
+        <div class="nd-vpage-sidebar-head">
+          More {categories.0} Videos
+        </div>
+        <div class="nd-vpage-sidebar-items">
+          <squarespace:query collection="{collection.urlId}" category="{categories.0}" limit="20">
+            <ul>
+              {.repeated section items}
+                {.equal? item.title title}
+                  <li class="active"><a href="{fullUrl}">{title}</a></li>
+                {.or}
+                  <li><a href="{fullUrl}">{title}</a></li>
+                {.end}
+              {.end}
+            </ul>
+          </squarespace:query>
+        </div>
+      </div>
+    </div>
+
+
+<script>var curWorkId='{id}';</script>
+
+
+    <squarespace:query collection="{collection.urlId}" category="{categories.0}" limit="12">
+
+        <script>var workListIds=   {items|json-pretty};</script>
+ 
+
+      <div class="nd-related-wrap" data-count="{items|count}">
+        <div class="nd-related-descr">
+          <squarespace:block-field id="blockField1" columns="1" label="Related text"/>
+        </div>
+        <div class="nd-related-content">
+          <div class="related-slider">
+    
+      
+
+            {.repeated section items}
+           
+                <div class="nd-related-content-one-wrap work-items {id}" >
+                  <a class="nd-related-content-one nd-project-one {id} ab {@tempId}" href="{fullUrl}" style="background-image: url({customContent.thumb_img.assetUrl}?format=750w);">
+                    <span class="title-wrap"> 
+                      <span class="pal"></span>
+                      <span class="title">{title}</span>
+                      <span class="pal"></span>
+                    </span>
+                    <div class="btn-play small"></div>
+                  </a>
+                </div>
+        
+
+            {.end}
+          </div>
+          <div class="related-controls">
+            <div class="arrow-prev"></div>
+            <div class="arrow-next"></div>
+          </div>
+          
+        </div>
+      </div>
+    </squarespace:query>
+  </div>
+{.end}
+
+

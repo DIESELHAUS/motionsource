@@ -1,0 +1,76 @@
+{.section collection}
+  <div class="nd-page-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({mainImage.assetUrl});">
+    <h1 class="nd-page-title">{title}</h1>
+  </div>
+  <div class="container">
+    <div class="nd-halfs works-halfs">
+      <div class="nd-half">
+        <squarespace:block-field id="Portfolio" columns="1" label="Portfolio text"/>
+      </div>
+      <div class="nd-half nd-categories">
+        <!-- <a class="nd-category" href="{collection.fullUrl}">All</a> -->
+        {.repeated section categories}
+          <a class="nd-category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>
+        {.end}
+      </div>
+    </div>
+  </div>
+{.end}
+
+<!-- item loop -->
+
+<div class="fullw-container">
+
+{.if categoryFilter} 
+
+  <squarespace:query collection="{collection.urlId}"  limit="12"  category="{categoryFilter}">
+  {.repeated section items}
+
+      <div class="nd-project-one-wrap">
+        <!-- <a class="nd-related-content-one nd-project-one" href="{fullUrl}" style="background-image: url({assetUrl}?format=750w);"> -->
+         <a class="nd-related-content-one nd-project-one" href="{fullUrl}" style="background-image: url({customContent.thumb_img.assetUrl}?format=750w);">
+          <span class="title-wrap"> 
+            <span class="pal"></span>
+            <span class="title">{title}</span>
+            <span class="pal"></span>
+          </span>
+          <div class="btn-play small"></div>
+        </a>
+      </div>
+  {.end}
+   </squarespace:query>
+
+{.or} 
+  <squarespace:query collection="{collection.urlId}"  limit="12"  >
+  {.repeated section items}
+
+      <div class="nd-project-one-wrap">
+        <!-- <a class="nd-related-content-one nd-project-one" href="{fullUrl}" style="background-image: url({assetUrl}?format=750w);"> -->
+         <a class="nd-related-content-one nd-project-one" href="{fullUrl}" style="background-image: url({customContent.thumb_img.assetUrl}?format=750w);">
+          <span class="title-wrap"> 
+            <span class="pal"></span>
+            <span class="title">{title}</span>
+            <span class="pal"></span>
+          </span>
+          <div class="btn-play small"></div>
+        </a>
+      </div>
+  {.end}
+   </squarespace:query>
+
+{.end} 
+
+
+
+</div>
+
+<div class="nd-whitebg-text">
+  <div class="container">
+    {.if categoryFilter}
+     <squarespace:block-field id="{categoryFilter}" columns="1" label="Portfolio description"/>
+    {.or}
+       
+    <squarespace:block-field id="PortfolioDescr" columns="1" label="Portfolio description"/>
+    {.end}
+  </div>
+</div>

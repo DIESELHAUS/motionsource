@@ -1082,20 +1082,10 @@ span.mlogo {
     max-width: 100%;
 }
 
-.awards-list {
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
 
-.awards-list li {
-	display: inline-block;
-	padding: 0 5px;
-	list-style: none;
-}
-
-.awards-list img {
-	max-height: 158px;
+#productWrapper {
+	margin-top: 120px;
+	padding: 20px;
 }
 @media only screen and (max-width: 3000px) and (min-width: 2200px) {
     
@@ -1233,13 +1223,6 @@ span.mlogo {
     }
     ul.site-navigation-list ul li{
         font-size: 11px;
-    }
-
-    .awards-list {
-      margin: 0px;
-      padding: 0;
-      display: block;
-      text-align: center;
     }
 
 }

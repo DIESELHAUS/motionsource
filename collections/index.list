@@ -1,0 +1,238 @@
+{.section collection}
+
+  {.var @curentPageLink urlId}
+
+
+       {.equal?:urlId:"about"}
+              <!-- Testing -->
+       {.end}
+
+  <!-- Create index sections -->
+  {.repeated section collections}
+
+
+
+  <div id="{urlId}-section" class=" index-section{.section mainImage}{.or} no-main-image{.end} {typeName} " data-url-id="{urlId}" data-collection-id="{id}">
+    <div class="index-section-wrapper{.section mainImage} has-main-image{.or}{.end}">
+
+      <!-- For Pages -->
+
+      {.collectionTypeNameEquals? page}
+
+        {.section mainImage}
+        <div  class="index-section-image content-fill" style="background:linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35))">
+          <img {@|image-meta} data-load="viewport" style="object-fit:cover;width:100%;" class="banner-img"/> 
+          <div class="meta-overlay" style="background:linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35));position: absolute;top: 0;width: 100%;height: 100%"></div>
+        </div>
+        
+        <div class="index-image-overlay"></div>
+        {.end}
+        <div class="content page-content{.section mainImage} has-main-image tmpl-loading{.end}" id="{urlId}-page" data-url-id="{urlId}">
+          <div class="content-inner{.section mainContent} has-content{.end}">
+              {mainContent}
+          </div>
+        </div>
+      {.end}
+    {.collectionTypeNameEquals? logoheader}
+      <div class="content page-content" >
+          <div class="content-inner{.section mainContent} has-content{.end}">
+            <div class="sqs-layout sqs-grid-12 columns-12">
+
+                {.repeated section items}
+                <div class="customspacer"></div>
+                <h2 style="position:relative;margin:0;margin-bottom:30px;">
+                    <span class="mlogo" style="background:url({assetUrl}?format=64w)"></span>
+                    {title}<br><em>{customContent.position}</em>
+                </h2>
+                {.end}
+            </div>
+              
+          </div>
+          <div class="row sqs-row"> {items.0.body} </div>
+        </div>
+      {.end}
+      <!-- For Galleries -->
+
+      {.collectionTypeNameEquals? gallery}
+      <div class="content gallery-content clear" id="{urlId}-gallery" data-url-id="{urlId}">
+        <div class="content-inner has-content">
+          {@|apply index-gallery.block}
+        </div>
+      </div>
+      {.end}
+
+      <!-- For Albums -->
+
+      {.collectionTypeNameEquals? album}
+        {.section mainImage}
+        <div class="album-section index-section-image content-fill">
+          <img {@|image-meta} data-load="false"/>
+        </div>
+        <div class="index-image-overlay"></div>
+        {.end}
+        <div class="content album-content{.section mainImage} has-main-image tmpl-loading{.end}" id="{urlId}-album" data-url-id="{urlId}">
+          <div class="content-inner has-content">
+            {@|apply index-album.block}
+          </div>
+        </div>
+      {.end}
+
+      <!-- For Heading + 3 images&text -->
+  <!--
+      {.collectionTypeNameEquals? work}
+          <div class="container">
+            <div class="nd-halfs works-halfs">
+              <div class="nd-half">
+                <squarespace:block-field id="Portfolio" columns="1" label="Portfolio text"/>
+              </div>
+              <div class="nd-half nd-categories">
+                <squarespace:block-field id="PortfolioCats" columns="1" label="Portfolio categories"/>
+              </div>
+            </div>
+          </div>
+        <!-- item loop -->
+
+        <div class="fullw-container">
+          <div class="projects-slider-wrap">
+            <div class="projects-slider">
+                <squarespace:block-field id="protfolioimageitems" columns="12" label="Featured Videos"/>
+            </div>
+            <div class="container slider-controls">
+              <div class="arrow-prev">
+                <img src="/assets/next-arrow.svg" alt="">
+              </div>
+              <div class="works-show-all">
+                <a href="/works">VIEW ALL</a>
+              </div>
+              <div class="arrow-next">
+                <img src="/assets/next-arrow.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      {.end}
+-->
+      {.collectionTypeNameEquals? team}
+        <div class="nd-whitebg-text">
+          <div class="container">
+            <squarespace:block-field id="team-text" columns="1" label="Team text"/>
+
+            <div class="nd-team-wrap">
+              {.repeated section items}
+                <div class="nd-team-one-wrap">
+                  <a href="{fullUrl}" class="nd-team-one">
+                    <img src="{assetUrl}?format=500w" alt="">
+                    <div class="name">{title}</div>
+                    <div class="position">{customContent.position}</div>
+                  </a>
+                </div>
+              {.end}
+            </div>
+          </div>
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? reviews}
+        <div class="nd-reviews">
+          <div class="container">
+            <div class="nd-reviews-slider">
+              {.repeated section items}
+                <div class="nd-reviews-one">
+                  <!-- <div class="nd-reviews-one-avtr">
+                    <img src="{assetUrl}?format=400w" alt="{title}">
+                  </div> -->
+                  <div class="nd-reviews-one-info">
+                    <div class="name">{title}</div>
+                    <div class="position">{customContent.position}</div>
+                  </div>
+                  <div class="nd-reviews-one-text">
+                    {excerpt}
+                  </div>
+
+                </div>
+              {.end}
+            </div>
+          </div>
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? reserve}
+        <div class="nd-reserve">
+          <div class="container">
+            <div class="nd-reserve-info">
+              <squarespace:block-field id="Reserveinfo" columns="1" label="Reserve info"/>
+            </div>
+            <div class="nd-reserve-form">
+              <squarespace:block-field id="Reserveform" columns="1" label="Reserve form"/>
+            </div>
+          </div>
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? contacts}
+        <div class="nd-reserve nd-reserve_contacts">
+          <div class="container">
+            <div class="nd-reserve-info">
+              <squarespace:block-field id="Contactsinfo" columns="1" label="Contacts info"/>
+            </div>
+            <div class="nd-reserve-form">
+              <squarespace:block-field id="Contactsform" columns="1" label="Contacts form"/>
+            </div>
+          </div>
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? testimonials}
+        <div class="nd-testimonials">
+          <div class="container">
+            <h2 class="testimonials-head">Client Testimonials</h2>
+            <div class="chosen-testim">
+              <div class="nd-avtr" style="display:none">
+                <img src="{items.0.customContent.avatar.assetUrl}" alt="">
+              </div>
+              <div class="nd-info">
+                <div class="nd-name">{items.0.customContent.author},<span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
+                <div class="nd-text">{items.0.excerpt}</div>
+              </div>
+            </div>
+            <div class="nd-testimonials-wrap">
+              {.repeated section items}
+                <div class="nd-testimonials-one {.equal? @index 1} is-active{.end}">
+                  <div class="logo" data-text="{excerpt}" data-author="{customContent.author}" data-authtitle="{customContent.auth_title}" data-avtr="{customContent.avatar.assetUrl}" style="background-image:url({customContent.logo.assetUrl});">
+                  </div>
+                </div>
+              {.end}
+            </div>
+          </div>
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? twovideos}
+        <div class="nd-twovid-halfs">
+          {.repeated section items}
+            <a href="{oembed.url}"   data-lity class="nd-twovid-half foculad" data-x="{mediaFocalPoint.x}" data-y={mediaFocalPoint.y} style="background:linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({assetUrl}?format=750w);" >
+              <div class="nd-twovid-half-head">{title}</div>
+              <div class="nd-twovid-half-body">{body|safe}</div>
+              <div class="btn-play small"></div>
+            </a>
+          {.end}
+        </div>
+      {.end}
+
+      {.collectionTypeNameEquals? onevideo}
+            {.repeated section items}
+ <a   href="{oembed.url}" data-bg="{assetUrl}?format=1200w" data-x="{mediaFocalPoint.x}" data-y={mediaFocalPoint.y}    {.if oembed.url} data-lity {.end} class="nd-twovid-half fullw parallax-bg foculad" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35))">
+                  <div class="nd-twovid-half-head">{title}</div>
+                  <div class="nd-twovid-half-body">{body|safe}</div>
+                    {.if oembed.url}
+                    <div class="btn-play"></div>
+                    {.end}
+                </a>
+
+               
+            {.end}
+       {.end}
+    </div>
+  </div>
+  {.end}
+{.end}

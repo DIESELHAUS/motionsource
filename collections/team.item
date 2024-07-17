@@ -1,0 +1,40 @@
+
+{.section item}
+  {.var @itemTitle title}
+  <div class="nd-page-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({customContent.coverim.assetUrl});">
+    <div class="nd-page-title">{title}</div>
+  </div>
+  <div class="container">
+    <div class="nd-vpage-floats">
+      <div class="nd-vpage-descr">
+
+        <div class="nd-vpage-clientlogo">
+          <img src="{assetUrl}?format=500w" alt="">
+        </div>
+        <h1 class="nd-vpage-title">{title}</h1>
+
+        <div class="nd-vpage-category">
+          {customContent.position}
+        </div>
+
+        <div class="nd-vpage-body">
+          {body}
+        </div>
+
+      </div>
+
+      <div class="nd-vpage-sidebar">
+        <div class="nd-member-gallery-wrap">
+          <div class="nd-member-gallery">
+            {.repeated section customContent.memgal}
+              <div class="nd-member-gallery-one" style="background-image:url({assetUrl}?format=1000w);"></div>
+            {.end}
+          </div>
+        </div>
+        <div class="nd-sidebar-expertise">
+          {customContent.expertise}
+        </div>
+      </div>
+    </div>
+  </div>
+{.end}
