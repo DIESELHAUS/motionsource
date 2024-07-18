@@ -394,6 +394,7 @@ $(".collection-586a835a44024318a0841042").append('<div class="fl-btn"><a class="
 
 function videoCategoryPageInit(){
 $("\
+#categorylistpage--section,\n\
 #categorylistpage-2-section,\n\
 #categorylistpage-3-section,\n\
 #categorylistpage-16-section,\n\
