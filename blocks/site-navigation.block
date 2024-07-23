@@ -19,7 +19,6 @@
            {.equal?:title:"Work"}
                 <ul>
 
-                  <li><a href="/work">Featured</a></li>
                   <li><a href="/brand-videos">Brand</a></li>
                   <li><a href="/tv-commercial">Commercial</a></li>
                   <li><a href="/corporate-videos">Corporate</a></li>
