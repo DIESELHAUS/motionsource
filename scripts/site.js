@@ -211,10 +211,12 @@ $(document).ready(function() {
     
     var author =$(logo).data('author');
     var title =$(logo).data('authtitle');
+    var video =$(logo).data('video');
     var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
     
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
+    $(testim).find(".nd-video").html(video);
 //    $(testim).find(".nd-avtr img").attr("src", $(logo).data('avtr'));
 
   });
