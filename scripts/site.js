@@ -216,7 +216,7 @@ $(document).ready(function() {
     
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
-    $(testim).find(".nd-video").html(video);
+    $(testim).find(".nd-video").find("iframe").attr("src",video);
 //    $(testim).find(".nd-avtr img").attr("src", $(logo).data('avtr'));
 
   });
