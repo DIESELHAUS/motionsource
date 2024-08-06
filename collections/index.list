@@ -193,8 +193,7 @@
               <div class="nd-info">
                 <div class="nd-name">{items.0.customContent.author},<span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
-                <div><iframe src="https://player.vimeo.com/video/925645506?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479 " frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="width:100%;height:100%;" title="Motion Source • 2024 Demo Reel"></iframe></div>
-              </div>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/925645506?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479 " frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Motion Source • 2024 Demo Reel"></iframe></div>              </div>
             </div>
             <div class="nd-testimonials-wrap">
               {.repeated section items}
