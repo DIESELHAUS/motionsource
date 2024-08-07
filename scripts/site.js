@@ -214,6 +214,7 @@ $(document).ready(function() {
     var bgvidimg =$(logo).data('bgvidimg');
     var video =$(logo).data('video');
     var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
+    var datahtml = '<iframe src=&quot;https://player.vimeo.com/video/9256455061?byline=0&portrait=0&title=0&autoplay=1&quot; allowfullscreen allow=&quot;autoplay; fullscreen&quot; scrolling=&quot;no&quot;></iframe>';
     
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
@@ -221,6 +222,7 @@ $(document).ready(function() {
 //    $(testim).find(".nd-avtr img").attr("src", $(logo).data('avtr'));
     $(testim).find(".nd-vpage-cover").css("background","url(" + bgvidimg + ")");
     $(testim).find(".nd-vpage-cover").find("a").attr("href",video);
+    $(testim).find(".nd-vpage-cover").find("a").attr("data-html", datahtml);
 
   });
   
