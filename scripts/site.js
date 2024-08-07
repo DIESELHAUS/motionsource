@@ -214,7 +214,7 @@ $(document).ready(function() {
     var bgvidimg =$(logo).data('bgvidimg');
     var video =$(logo).data('video');
     var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
-    var datahtml = '<iframe src=&quot;https://player.vimeo.com/video/9256455061?byline=0&portrait=0&title=0&autoplay=1&quot; allowfullscreen allow=&quot;autoplay; fullscreen&quot; scrolling=&quot;no&quot;></iframe>';
+    var datahtml = '<iframe src=&quot;https://player.vimeo.com/video/954106703?byline=0&portrait=0&title=0&autoplay=1&quot; allowfullscreen allow=&quot;autoplay; fullscreen&quot; scrolling=&quot;no&quot;></iframe>';
     
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
