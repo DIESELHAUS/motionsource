@@ -215,10 +215,11 @@ $(document).ready(function() {
     var video =$(logo).data('video');
     var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
 
+    if(video!="") {
     var parts = video.split('/');
     var vimeoID = parts.pop() || parts.pop();
-
     var datahtml = '<iframe src="https://player.vimeo.com/video/'+vimeoID.replace(/\s/g, "")+'?byline=0&portrait=0&title=0&autoplay=1"; allowfullscreen allow="autoplay; fullscreen" scrolling="no"></iframe>';
+    }
     
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
