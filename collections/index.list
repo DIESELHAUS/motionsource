@@ -193,7 +193,7 @@
               <div class="nd-info">
                 <div class="nd-name">{items.0.customContent.author},<span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
-                {.section items.0.sourceUrl}
+                {.section items}
   Item exists.
 {.or}
   Item does not exist.
