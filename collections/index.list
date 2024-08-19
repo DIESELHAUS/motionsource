@@ -193,8 +193,8 @@
               <div class="nd-info">
                 <div class="nd-name">{items.0.customContent.author},<span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
-                <div class="nd-video" style="display:none;padding:0;position:relative;"><iframe src="{items.0.sourceUrl}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Motion Source • 2024 Demo Reel"></iframe></div>              </div>
-                <div class="nd-vpage-cover" style="display:none;background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({items.0.assetUrl});">
+                <div class="nd-video" style="padding:0;position:relative;"><iframe src="{items.0.sourceUrl}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Motion Source • 2024 Demo Reel"></iframe></div>              </div>
+                <div class="nd-vpage-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({items.0.assetUrl});">
                   <a href="{items.0.sourceUrl}" data-lity><div class="btn-play"></div></a>
                 </div>
             </div>
