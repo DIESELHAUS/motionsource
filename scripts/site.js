@@ -214,7 +214,7 @@ $(document).ready(function() {
     var bgvidimg =$(logo).data('bgvidimg');
     var video =$(logo).data('video');
     var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
-console.log(video)
+
     if(video!="") {
     var parts = video.split('/');
     var vimeoID = parts.pop() || parts.pop();
