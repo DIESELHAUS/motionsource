@@ -202,6 +202,8 @@ $(document).ready(function() {
 //    $(this).html(tonormal);
 //  });
 
+$(".nd-testimonials-one:nth-child(2)").addClass('is-active');
+
   $(".nd-testimonials-one").click(function(event) {
     var logo = $(this).find('.logo');
     var wrap = $(this).parents(".nd-testimonials");
