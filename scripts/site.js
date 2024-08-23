@@ -215,7 +215,10 @@ $(document).ready(function() {
     var title =$(logo).data('authtitle');
     var bgvidimg =$(logo).data('bgvidimg');
     var video =$(logo).data('video');
-    var htmltitle= author+',<span class="info-auth-title"> '+title+'</span>';
+    var htmltitle='';
+    if(author!='' && title!='') {
+      htmltitle = author+',<span class="info-auth-title"> '+title+'</span>';
+    }
 
     if(video!="") {
     var parts = video.split('/');
