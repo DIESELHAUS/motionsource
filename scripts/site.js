@@ -215,7 +215,7 @@ $(document).ready(function() {
     var author =$(logo).data('author');
     var title =$(logo).data('authtitle');
     var bgvidimg =$(logo).data('bgvidimg');
-    var embedVid =$(logo).data('embedVid');
+    var embedVid =$(logo).data('embedvid');
     var video =$(logo).data('video');
     var htmltitle='';
     if(author!='' && title!='') {
