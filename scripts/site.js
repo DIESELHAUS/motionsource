@@ -211,6 +211,7 @@ $(document).ready(function() {
     $('.nd-testimonials-one').removeClass('is-active');
     $(logo).parent().addClass('is-active');
     
+    var body =$(logo).data('body');
     var author =$(logo).data('author');
     var title =$(logo).data('authtitle');
     var bgvidimg =$(logo).data('bgvidimg');
@@ -229,6 +230,7 @@ $(document).ready(function() {
       $('.nd-vpage-cover').hide();
     }
     
+    $(testim).find(".nd-body").html(body);
     $(testim).find(".nd-name").html(htmltitle);
     $(testim).find(".nd-text").html($(logo).data('text'));
     //$(testim).find(".nd-video").find("iframe").attr("src",video);
