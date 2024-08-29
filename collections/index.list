@@ -204,7 +204,7 @@
             <div class="nd-testimonials-wrap">
               {.repeated section items}
                 <div class="nd-testimonials-one {.equal? @index 1} is-active{.end}">
-                  <div class="logo" data-bodyContent="{body}" data-text="{excerpt}" data-author="{customContent.author}" data-authtitle="{customContent.auth_title}" data-avtr="{customContent.avatar.assetUrl}" data-bgvidimg="{assetUrl}" data-video="{sourceUrl}" style="background-image:url({customContent.logo.assetUrl});">
+                  <div class="logo" data-text="{excerpt}" data-author="{customContent.author}" data-authtitle="{customContent.auth_title}" data-avtr="{customContent.avatar.assetUrl}" data-bgvidimg="{assetUrl}" data-video="{sourceUrl}" style="background-image:url({customContent.logo.assetUrl});">
                   </div>
                 </div>
               {.end}
