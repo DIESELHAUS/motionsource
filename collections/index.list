@@ -193,10 +193,9 @@
               <script>console.log({@|json-pretty})</script>
               
               <div class="nd-info">
-                <div class="nd-body"><iframe src="{items.0.customContent.embed_vid}?h=0a923d133b&amp;badge=0&amp;autopause=0&amp;transparent=0&amp;player_id=0&amp;app_id=58479" width="100%" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Client Case Study: Chicago Run"></iframe></div>
+                <div class="nd-embed_vid"><iframe src="{items.0.customContent.embed_vid}?h=0a923d133b&amp;badge=0&amp;autopause=0&amp;transparent=0&amp;player_id=0&amp;app_id=58479" width="100%" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Client Case Study: Chicago Run"></iframe></div>
                 <div class="nd-name">{items.0.customContent.author} <span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
-                <div class="nd-video" style="display:none;padding:0;position:relative;"><iframe src="{items.0.sourceUrl}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Motion Source • 2024 Demo Reel"></iframe></div>              </div>
                 <div class="nd-vpage-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({items.0.assetUrl});">
                   <a href="{items.0.sourceUrl}" data-lity><div class="btn-play"></div></a>
                 </div>
@@ -204,7 +203,7 @@
             <div class="nd-testimonials-wrap">
               {.repeated section items}
                 <div class="nd-testimonials-one {.equal? @index 1} is-active{.end}">
-                  <div class="logo" data-text="{excerpt}" data-author="{customContent.author}" data-authtitle="{customContent.auth_title}" data-avtr="{customContent.avatar.assetUrl}" data-bgvidimg="{assetUrl}" data-video="{sourceUrl}" style="background-image:url({customContent.logo.assetUrl});">
+                  <div class="logo" data-text="{excerpt}" data-author="{customContent.author}" data-authtitle="{customContent.auth_title}" data-avtr="{customContent.avatar.assetUrl}" data-bgvidimg="{assetUrl}" data-video="{sourceUrl}" data-embedVid="{customContent.embed_vid}" style="background-image:url({customContent.logo.assetUrl});">
                   </div>
                 </div>
               {.end}

@@ -215,6 +215,7 @@ $(document).ready(function() {
     var author =$(logo).data('author');
     var title =$(logo).data('authtitle');
     var bgvidimg =$(logo).data('bgvidimg');
+    var embedVid =$(logo).data('embedVid');
     var video =$(logo).data('video');
     var htmltitle='';
     if(author!='' && title!='') {
@@ -229,6 +230,14 @@ $(document).ready(function() {
     } else {
       $('.nd-vpage-cover').hide();
     }
+
+    if(embedVid!="") {
+      var dataEmbedVid = '<iframe src="'+embedVid+'?h=0a923d133b&amp;badge=0&amp;autopause=0&amp;transparent=0&amp;player_id=0&amp;app_id=58479" width="100%" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Client Case Study: Chicago Run"></iframe>';
+      $(testim).find(".nd-embed_vid").html(dataEmbedVid);
+      $('.nd-embed_vid').show();
+      } else {
+        $('.nd-embed_vid').hide();
+      }
 
     //$(testim).find(".nd-body").html(body);
     $(testim).find(".nd-name").html(htmltitle);
