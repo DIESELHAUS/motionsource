@@ -190,6 +190,7 @@
               <div class="nd-avtr" style="display:none">
                 <img src="{items.0.customContent.avatar.assetUrl}" alt="">
               </div>
+              <script>console.log({@|json-pretty})</script>
               <div class="nd-info">
                 <div class="nd-name">{items.0.customContent.author} <span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
