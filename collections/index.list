@@ -193,10 +193,10 @@
               <script>console.log({@|json-pretty})</script>
               
               <div class="nd-info">
-                <div class="nd-embed_vid" style="display:none;"><iframe src="{items.0.customContent.embed_vid}?h=0a923d133b&amp;badge=0&amp;autopause=0&amp;transparent=0&amp;player_id=0&amp;app_id=58479" width="100%" height="800" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Client Case Study: Chicago Run"></iframe></div>
+                <div class="nd-embed_vid"><iframe src="{items.0.customContent.embed_vid}?h=0a923d133b&amp;badge=0&amp;autopause=0&amp;transparent=0&amp;player_id=0&amp;app_id=58479" width="100%" height="800" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Client Case Study: Chicago Run"></iframe></div>
                 <div class="nd-name">{items.0.customContent.author} <span class="info-auth-title"> {items.0.customContent.auth_title}</span></div>
                 <div class="nd-text">{items.0.excerpt}</div>
-                <div class="nd-vpage-cover" style="background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({items.0.assetUrl});">
+                <div class="nd-vpage-cover" style="display:none;background: linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({items.0.assetUrl});">
                   <a href="{items.0.sourceUrl}" data-lity><div class="btn-play"></div></a>
                 </div>
             </div>
