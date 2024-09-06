@@ -226,7 +226,7 @@ $(document).ready(function() {
     var parts = video.split('/');
     var vimeoID = parts.pop() || parts.pop();
     var datahtml = '<iframe src="https://player.vimeo.com/video/'+vimeoID.replace(/\s/g, "")+'?byline=0&portrait=0&title=0&autoplay=1"; allowfullscreen allow="autoplay; fullscreen" scrolling="no"></iframe>';
-    $('.nd-vpage-cover').show();
+      //$('.nd-vpage-cover').show();
     } else {
       $('.nd-vpage-cover').hide();
     }
