@@ -216,7 +216,7 @@
       {.collectionTypeNameEquals? twovideos}
         <div class="nd-twovid-halfs">
           {.repeated section items}
-            <a href="{oembed.url}"   data-lity class="nd-twovid-half foculad" data-x="{mediaFocalPoint.x}" data-y={mediaFocalPoint.y} style="background: url({assetUrl}?format=750w);" >
+            <a href="{oembed.url}"   data-lity class="nd-twovid-half foculad" data-x="{mediaFocalPoint.x}" data-y={mediaFocalPoint.y} style="background:linear-gradient( rgba(62,62,62,0.35), rgba(62,62,62,0.35)), url({assetUrl}?format=750w);" >
               <div class="nd-twovid-half-head">{title}</div>
               <div class="nd-twovid-half-body">{body|safe}</div>
               <div class="btn-play small"></div>
